@@ -1,0 +1,25 @@
+#MainContainer{
+    display : flex;
+    flex-direction: column;
+    background-color:rgb(240, 230, 209);
+    margin-left : 15vw;
+    margin-top:10vh;
+    font-size: 1vw;
+    width : 85vw;
+    height: 90vh;
+    padding: 3vw;
+}
+h1{
+    margin-bottom: 2vw;
+}
+#titre{
+    margin-left: 1vw;
+    font-weight: 600;
+    width : 40vw;
+}
+button {
+    margin : 1vh;
+}
+textarea{
+    resize: none;
+}

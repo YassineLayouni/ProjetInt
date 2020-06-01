@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a [routerLink]="['/admin']" ><i class="fas fa-home"></i>Accueil</a></li>
+            <li><a [routerLink]="['/listusers']"  ><i class="fas fa-user"></i>Liste des utilisateurs</a></li>
+            <li><a [routerLink]="['/adminstat']" ><i class="fas fa-home"></i>Statistiques</a></li>
+            <li><a [routerLink]="['/viewlogicielsadm']"  >Logiciels</a></li>
+            <li><a   >Documents</a></li>
+            <li><a  [routerLink]="['/forumadm']" >Forum</a></li>
+
+
+           
+        </ul> 
+       
+    </div>
+    <div class="main_content">
+        <div class="header">Bienvenue,{{getadminName()}}        <button id="logout" class="btn btn-danger" (click)="logout()">deconnection</button>
+        </div>  
+        
+      
+    </div>
+</div>
+
+</body>
+</html>

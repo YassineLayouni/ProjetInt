@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Etudiant</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a [routerLink]="['/etudiant']"  >Accueil</a></li>
+            <li><a [routerLink]="['/documents']"  >Documents</a></li>
+            <li><a [routerLink]="['/viewlogicielsetud']"  >Logiciels</a></li>
+            <li><a [routerLink]="['/depotetud']"  >Depot</a></li>
+
+            <li><a [routerLink]="['/viewstatsetud']" >Statistiques</a></li>
+
+           
+            <li><a  [routerLink]="['/forumetud']" >Forum</a></li>
+           
+        </ul> 
+       
+    </div>
+    <div class="main_content">
+        <div class="header">Bienvenue,{{getEtudName()}}<button id="logout" class="btn btn-danger" (click)="logout()">deconnection</button>
+        </div>  
+        
+      
+    </div>
+</div>
+
+</body>
+</html>

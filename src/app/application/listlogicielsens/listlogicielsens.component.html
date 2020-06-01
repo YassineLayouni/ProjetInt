@@ -1,0 +1,17 @@
+<div id="background"></div>
+<app-homeens></app-homeens>
+<div id="MainContainer">
+    <div id="logiciel">
+<ng-container *ngFor="let l of Logiciels">
+
+    <div id="logiciel1">
+        <h3>{{l.nom}}</h3>
+        <img id="round" [src]="l.lien">
+        <p>Plateform:{{l.plateform}}</p>
+        <a role="button" class="btn btn-info" style="padding: 1vh;margin-bottom: 1vh;" [href]="l.lientel"  target="_blank">Télécharger</a>
+        <a style="padding: 1vh;" class="btn btn-danger" role="button" (click)="deleteLog(l.id)" >supprimer</a>
+    </div>
+</ng-container>
+</div>
+<li><a id="addl" style="padding: 1vh;" role="button" class="btn btn-success" [routerLink]="['../ajoutlogiciel']" >Ajouter un Logiciel</a></li>
+</div>

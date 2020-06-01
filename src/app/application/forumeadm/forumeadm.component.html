@@ -1,0 +1,29 @@
+<app-homeadm></app-homeadm>
+<div id="MainContainer">
+    <div id="ImageContainer"></div>
+    <div id = "ToolBar">
+        <img src="../assets/Logo.png">
+        <div id="SearchBar">
+            <input id="Search" class="form-control" type="text" placeholder="Chercher Publication" [(ngModel)]="recherche"/>
+            <div id="SearchButton" type="submit"><i class="fa fa-search"></i></div>
+        </div>
+        <button id="AjoutPub" type="button" class="btn btn-primary" [routerLink]="['/AjouterPublicationadm']">Ajouter Publication</button>
+    </div>
+    <div *ngFor="let t of publications">
+    <div id="pub" *ngIf="recherche==''||t.titre==recherche||recherche==null">
+        <div id="publication" [routerLink]="['/Publicationadm',t.idp]">
+            <div id="titre">{{t.titre}}</div>
+            <div id="description">
+                {{getcurrName(t.ownerid)}}<br> {{t.datep.toDate()| date:'dd/MM/yyyy HH:mm'}}<br>                
+                {{t.description}}
+                
+            </div>
+            <div id = "Comment">
+                <img  src="../assets/Comment.png" style="position: absolute;align-self: center;">
+                <div id="nbComment">{{t.commentaires.length}}</div>
+            </div>
+        </div>
+        <button id="AjoutCom" type="button" class="btn btn-dark" [routerLink]="['/AjouterCommentaireadm',t.idp]">Ajouter Commentaire</button>
+    </div>
+    </div>
+</div>

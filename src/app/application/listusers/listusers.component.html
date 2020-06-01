@@ -1,0 +1,29 @@
+<app-homeadm></app-homeadm>
+<h3>La liste des utilisateurs</h3>
+
+<div class="contenu">
+    <table class="table">
+        <thead>
+   
+        <tr>
+            <th>nom</th>
+            <th>Email</th>
+            <th>type utilisateur</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody >
+            <tr *ngFor="let u of Users">
+                <td>{{u.name}}</td>
+                <td>{{u.email}}</td>
+                <td>{{u.type}}</td>
+                <td>
+                    <a class="btn btn-danger" role="button" (click)="deleteUser(u.id)" >supprimer</a>
+                </td>
+              
+            </tr>
+            
+        </tbody>
+    </table>
+
+ </div>

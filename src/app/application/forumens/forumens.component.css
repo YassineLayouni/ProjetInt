@@ -1,0 +1,120 @@
+#MainContainer{
+    display : flex;
+    flex-direction: column;
+    background-color:rgb(240, 230, 209);
+    margin-left : 15vw;
+    margin-top:10vh;
+    align-items: center;
+    font-size: 1vw;
+}
+#ImageContainer{
+    display : flex;
+    justify-content: center;
+    background-image:url(https://blogsimages.adobe.com/creative/files/2019/06/AdobeStock_227207295.jpeg);
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width : 82vw;
+    height : 35vh;
+    margin : 1vw;
+    background-color: rgb(45, 90, 158);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+}
+#ToolBar{
+    border-bottom: 2px solid grey;
+    display: flex;
+    width :83vw;
+    height : 4vw;
+    margin : 1vw;
+    align-items: center;
+    flex-direction: row;
+}
+#Search{
+    border : 0px;
+    border: 1px solid rgb(179, 179, 179);
+    text-align: center;
+    align-self: center;
+    height : 5vh;
+}
+#SearchBar{
+    margin-left:23vw;
+    display: flex;
+    align-self: center;
+}
+#SearchButton{
+    border-radius: 10%;
+    background-color: gray;
+    width : 4vw;
+    height : 2.3vw;
+    margin-left: 0.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+#SearchButton:hover{
+    background-color: rgb(82, 82, 82);
+}
+#AjoutPub{
+    margin-left:15vw;
+    font-size: 1vw;
+    display: flex;
+    width: 14vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pub{
+    width : 65vw;
+}
+#publication{
+    
+    background-color: rgb(238, 217, 186);
+    margin : 1vw;
+    font-size: 2vw;
+    padding : 1vw;
+    width : 60vw;
+    border-radius: 10px;
+    position: relative;
+    left : -8vw;
+    transition: 0.5s all;
+}
+#publication:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#titre{
+    font-weight : bold;
+}
+#description{
+    margin-left: 5vw;
+    width: 45vw;
+    display: flex;
+}
+#Comment{
+    position: absolute;
+    right : 5vw;
+    bottom : 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+#nbComment{
+    position : absolute;
+    font-size: 1vw;
+    align-self: flex-end;
+}
+#AjoutCom{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    float: right;
+    position: relative;
+    bottom : 13vh;
+    width: 9vw;
+    font-size: 0.7vw;
+}
+a{
+    color: white;
+}

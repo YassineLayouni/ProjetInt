@@ -1,0 +1,40 @@
+#MainContainer{
+    display : flex;
+    flex-direction: column;
+    background-color:rgb(240, 230, 209);
+    margin-left : 15vw;
+    margin-top:10vh;
+    align-items: center;
+    font-size: 1vw;
+}
+
+
+#AjoutQCM{
+    margin-left:15vw;
+    font-size: 1vw;
+    display: flex;
+    width: 14vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Qcm{
+    
+    background-color: rgb(238, 217, 186);
+    margin : 1vw;
+    font-size: 2vw;
+    padding : 1vw;
+    width : 60vw;
+    border-radius: 10px;
+    position: relative;
+    left : -8vw;
+    transition: 0.5s all;
+}
+a{
+    color: white;
+}
+#Qcm:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

@@ -1,0 +1,13 @@
+<div id="MainContainer">
+    <h1 align="center">Ajouter Un Commentaire</h1>
+    <div id="publication">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">     
+            <div class="form-group">
+                <label for="Description">Description:</label>
+                <textarea id="description" name="description" class="form-control" rows="10" [(ngModel)]="description" required></textarea>
+            </div>
+            <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Ajouter</button>
+        </form>
+        <button  type="button" class="btn btn-danger" [routerLink]="['/forumadm']">Retourner</button>
+    </div>
+</div>

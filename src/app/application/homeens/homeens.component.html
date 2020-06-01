@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Enseignant</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a [routerLink]="['/enseignant']"  >Accueil</a></li>
+            <li><a [routerLink]="['/documents']"  >Documents</a></li>
+            <li><a [routerLink]="['/logiciels']"  >Logiciels</a></li>
+            <li><a [routerLink]="['/QCMens']"  >QCM</a></li>
+
+            <li><a [routerLink]="['/depotens']"  >Depot</a></li>
+
+            <li><a [routerLink]="['/viewstatsens']" >Statistiques</a></li>
+            <li><a  [routerLink]="['/forumens']" >Forum</a></li>
+           
+        </ul> 
+       
+    </div>
+    <div class="main_content">
+        <div class="header">Bienvenue,{{getensName()}}        <button id="logout" class="btn btn-danger" (click)="logout()">deconnection</button>
+        </div>  
+        
+      
+    </div>
+</div>
+
+</body>
+</html>

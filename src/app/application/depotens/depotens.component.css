@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+
+*{
+
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+#MainContainer{
+  margin-left: 180px;
+  width : 86.8vw;
+  display : flex;
+}
+#background{
+  width: 100vw;
+  height : 100vh;
+  background-color: rgb(240, 230, 209);
+  position: fixed;
+  z-index: -1;
+}
+#leftdiv{
+  width:50%;
+  padding: 1vw;
+}
+#sideimg{
+position: absolute;
+top:13%;
+left:66.7%;
+  width: 450px;
+  height: 450px;
+  opacity: 0.8;
+
+}
+#deposerdiv{
+  width: 43.4%;
+  overflow: hidden;
+  position: fixed;
+  margin-left : 43.4%;
+  height: 91vh;
+  background-image: url(https://images.wallpapersden.com/image/download/4k-natural-gradient_67713_3840x2160.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
+  color : rgb(240, 230, 209);
+  }
+h5{
+  text-decoration: underline;
+}
+a{
+  color:rgb(151, 34, 34);
+}

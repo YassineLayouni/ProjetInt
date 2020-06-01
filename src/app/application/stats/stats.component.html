@@ -1,0 +1,13 @@
+<div id="background"></div>
+<app-homeens></app-homeens>
+<div id="MainContainer">
+
+<ng-container *ngFor="let s of Statistiques">
+    <div id="stat">
+        <h3>{{s.nom}}</h3>
+        <img [src]="s.lien">
+    </div>
+    <hr/>
+</ng-container>
+</div>
+

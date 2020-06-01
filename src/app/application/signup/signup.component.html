@@ -1,0 +1,42 @@
+<h1 class="text-center">Créer un compte</h1>
+
+   <form (ngSubmit)="signup(f)" #f="ngForm">
+    <div class="form-group ml-4">
+      <label for="mat">
+        Type
+        </label>
+        <select   [(ngModel)]='typeu' name="typeu"  class="form-control" >
+          <option  value="etudiant">etudiant</option>
+          <option value="enseignant">enseignant</option>
+          </select>
+    </div>
+    <div class="form-group ml-4">
+    <input ngModel name="name" #name="ngModel" type="text" class="form-control" placeholder="Nom" required>
+    <div class="alert alert-danger" *ngIf="name.invalid && name.touched">le champ nom est obligatoire</div>
+    </div>
+
+    <div class="form-group ml-4">
+    <input ngModel name="email" #email="ngModel" type="email" class="form-control" placeholder="E-mail" required email>
+    <div class="alert alert-danger" *ngIf="email.touched && email.errors?.required">le champ E-mail est obligatoire</div>
+    <div class="alert alert-danger" *ngIf="email.touched && email.errors?.email">Veuillez saisir une adresse e-mail valide</div>
+    </div>
+    <div class="form-group ml-4">
+    <input ngModel name="password" #password="ngModel" type="password" class="form-control" placeholder="mot de passe"
+      required minlength="8">
+    <div class="alert alert-danger" *ngIf="password.touched && password.errors?.required">mot de passe obligatoire</div>
+    <div class="alert alert-danger" *ngIf="password.touched && password.errors?.minlength">Entrez une combinaison d'au moins 8 charactères
+   </div>
+    </div>
+
+    <div class="form-group ml-4">
+    <input ngModel name="passwordConfirm" #passwordConfirm="ngModel" type="password" class="form-control" placeholder="confirmer mot de passe"
+      required>
+    <div class="alert alert-danger" *ngIf="passwordConfirm.invalid && passwordConfirm.touched">confirmer mot de passe obligatoire</div>
+    <div class="alert alert-danger" *ngIf="passwordConfirm.value !== password.value && passwordConfirm.touched">confirmation  invalid
+      </div>
+    </div>
+ <input type="submit" value="Inscription" class="btn btn-success" [disabled]="f.invalid" >
+ <br/><div class="alert alert-danger" *ngIf="erreur">
+    {{ erreur }}
+  </div>
+ </form>

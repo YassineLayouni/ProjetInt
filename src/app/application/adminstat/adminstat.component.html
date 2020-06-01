@@ -1,0 +1,13 @@
+<div id="background"></div>
+<app-homeadm></app-homeadm>
+<div id="MainContainer">
+
+<ng-container *ngFor="let s of Statistiques">
+    <div id="stat">
+        <h3>{{s.nom}}</h3>
+        <img [src]="s.lien">
+    </div>
+    <hr/>
+</ng-container>
+<li><a role="button" style="padding: 1vh;margin-left: 24vw;" class="btn btn-info" [routerLink]="['../ajoutstat']" >créer un statistique</a></li>
+</div>

@@ -1,0 +1,19 @@
+<app-homeetud></app-homeetud>
+
+<div id="MainContainer">
+    <h1 align="center">Ajouter Une Publication</h1>
+    <div id="publication">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">     
+            <div class="form-group">
+                <label for="titre">Titre:</label>
+                <input id="titre" name="titre" type="text" [(ngModel)]="titre" required>
+            </div>
+            <div class="form-group">
+                <label for="Description">Description:</label>
+                <textarea id="description" name="description" class="form-control" rows="10" [(ngModel)]="description" required></textarea>
+            </div>
+            <button type="submit" [disabled]="f.invalid" class="btn btn-primary">Ajouter</button>
+        </form>
+        <button type="button" class="btn btn-danger" [routerLink]="['/forumetud']">Retourner</button>
+    </div>
+</div>

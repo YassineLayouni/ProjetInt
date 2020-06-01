@@ -1,0 +1,27 @@
+<app-homeens></app-homeens>
+<h3>Ajouter un Logiciel</h3>
+
+<div class="form">
+    <form (ngSubmit)="addLogiciel(f)" #f="ngForm">
+        
+        <div class="form-group ml-4">
+        <input id="nom" ngModel name="nom" #nom="ngModel" type="text" class="form-control" placeholder="Nom" required>
+        <div class="alert alert-danger" *ngIf="nom.invalid && nom.touched">le nom est obligatoire</div>
+        </div>
+        
+            <div class="form-group ml-4">
+                <input id="plateform" ngModel name="plateform" #plateform="ngModel" type="text" class="form-control" placeholder="plateform" required>
+                <div class="alert alert-danger" *ngIf="plateform.invalid && plateform.touched">le nom de plateform est obligatoire</div>
+            </div>
+            <div class="form-group ml-4">
+                <input id="lientel" ngModel name="lientel" #lientel="ngModel" type="text" class="form-control" placeholder="Lien téléchargement" required>
+                <div class="alert alert-danger" *ngIf="lientel.invalid && lientel.touched">le lien est obligatoire</div>
+            </div>
+                <div class="form-group ml-4">
+        <label for="image">icon</label><br/>
+        <input id="image" type="file" ngModel name="image" required #image> <br><br>
+        <input type="submit" value="Ajouter" class="btn btn-primary" [disabled]="f.invalid">
+    </div>
+
+    </form>
+ </div>

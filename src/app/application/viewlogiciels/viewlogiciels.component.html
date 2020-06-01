@@ -1,0 +1,14 @@
+<div id="background"></div>
+<app-homeadm></app-homeadm>
+<div id="MainContainer">
+<div id="logiciel">
+    <ng-container *ngFor="let l of Logiciels">
+        <div id="logiciel1">
+            <h3>{{l.nom}}</h3>
+            <img id="round" [src]="l.lien">
+            <p style="color:rgb(199, 199, 199)">Plateform:{{l.plateform}}</p>
+            <a role="button" style="padding: 1vh;" class="btn btn-info" [href]="l.lientel"  target="_blank">Télécharger</a>
+        </div>
+    </ng-container>
+</div>
+</div>
